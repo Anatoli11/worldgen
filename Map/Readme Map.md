@@ -1,3 +1,5 @@
+Using this for a test
+
 Folder that will contain constraints for the map and map generation. Sub-folders 
 include the map graphics and map terrain type information. I envision the map as hex 
 grid style with, in the beginning, the hexes being of one general type of terrain in 
