@@ -2,6 +2,10 @@ USE [WorldGen]
 GO
 
 /****** Object:  Table [dbo].[gameLeaderInfo]    Script Date: 2017-02-24 9:53:22 AM ******/
+// a table containing information on all leaders in all games
+// Notes:
+// Leaders have space for five traits while individuals have only three
+
 SET ANSI_NULLS ON
 GO
 
@@ -9,11 +13,30 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[gameLeaderInfo](
-    [intPeopleNameID] [INTEGER] -- unique identifier for the group of people
-    [intPeopleMetaInfoID] [INTEGER] -- ID for the people group - groups are based on 1) geography 2) ??
-	[strPeopleName] [NVARCHAR](50) NOT NULL, -- Name of the people
-	[bitIsPeopleModded] [BIT] NULL, -- Is the people a mod?
-	[strPeopleNotes] [NCHAR](2000) NULL -- People notes
+	[intGameID] [int] NOT NULL,                 //ID for the particular game
+	[strLeaderName] [nvarchar](50) NOT NULL,    //Name of the leader
+	[strLeaderGender] [nvarchar](1) NOT NULL,   //Gender of the leader
+    [intMindIntel] integer NOT NULL,            //Mind stat intelligence
+    [intMindConte] integer NOT NULL,            //Mind stat contemplative
+    [intMindEducat] integer NOT NULL,           //Mind stat education
+    [intBodySize] integer NOT NULL,             //Body stat size
+    [intBodyStren] integer NOT NULL,            //Body stat size
+    [intBodyHeart] integer NOT NULL,            //Body stat size
+    [intSoulHones] integer NOT NULL,            //Soul stat honesty
+    [intSoulCoope] integer NOT NULL,            //Soul stat cooperative
+    [intSoulVentu] integer NOT NULL,            //Soul stat venturesome
+	[intSecTrait1ID] [int] NULL,                //The ID for a secondary trait
+	[strSecTrait1Name] [nvarchar](15) NULL,     //The name of the secondary trait
+	[intSecTrait2ID] [int] NULL,                //The ID for a secondary trait
+	[strSecTrait2Name] [nvarchar](15) NULL,     //The name of the secondary trait
+	[intSecTrait3ID] [int] NULL,                //The ID for a secondary trait
+	[strSecTrait3Name] [nvarchar](15) NULL,     //The name of the secondary trait
+	[intSecTrait4ID] [int] NULL,                //The ID for a secondary trait
+	[strSecTrait4Name] [nvarchar](15) NULL,     //The name of the secondary trait
+	[intSecTrait5ID] [int] NULL,                //The ID for a secondary trait
+	[strSecTrait5Name] [nvarchar](15) NULL,     //The name of the secondary trait
+
+	[strSuffixNameNotes] [nchar](500) NULL      //Free-form text field for notes
 ) ON [PRIMARY]
 
 GO
