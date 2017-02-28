@@ -1,0 +1,4 @@
+Glossary
+
+This file holds definitions of the different aspects of the game for clarification purposes
+

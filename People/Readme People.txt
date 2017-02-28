@@ -11,11 +11,15 @@ traits available, possible personal afflictions, and vocations.
 //Done: Create an intial design for the data table for person
 //  Done: Person name added
 //  Done: Stat variables added
-//  Done: Fields for three secondary traits added
+//  Current: Fields for three secondary traits?
+//  Fields for skills
+//  Weapons and armour
 //Done: Create an intial design for the data table for a leader
 //  Done: Person name added
 //  Done: Stat variables added
-//  Done: Fields for five secondary traits added
+//  Current: Fields for five secondary traits?
+//  Fields for skills
+//  Weapons and armour
 //Decide on the bell curve for each stat and trait
 //Create functions for number generation
 //Determine additional leader stats
