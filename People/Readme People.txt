@@ -34,12 +34,27 @@ traits available, possible personal afflictions, and vocations.
 
 
 //***** Base tables needed (for static information that is used to generate objects for the game) *****
-//baseTraitInfo             - Base table with information on traits used by the game
+//Created baseTraitInfo     - Base table with information on traits used by the game
 
 
 //***** Name algorithm *****
-//Generate script
-
+//Generate script psuedo code
+//  - Generate stats
+//  - Generate social background (TABLE baseSocialLevelList created)
+//  - Generate first name (TABLE baseNameFirstList created)
+//  - Based on stats are there any outstanding features?
+//      - Yes, percentage chance to add a prefix or suffix based on outstanding stat
+//          - Chance met, NAME_COMPLETED (TABLES baseNamePrefixList, baseNameSuffixList created) NOTE: Add fields for outstanding stat requirements
+//          - Chance not met, continue
+//  - Based on social background, does it merit a last name? Percentage chance
+//          - Chance met, NAME_COMPLETED (TABLE baseNameLastList created)
+//          - Chance not met, continue
+//  - Percentage chance of nickname, maybe weighted by social background
+//          - Chance met, NAME_COMPLETED (TABLE baseNameMetaList created)
+//          - Chance not met, continue
+//  - Determine if name is being used elsewhere
+//          - No, NAME_COMPLETED
+//          - Yes, flag name? restart process?
 
 //These may be under a different readme as they are functional for play
 //Tech tree design

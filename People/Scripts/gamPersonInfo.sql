@@ -4,6 +4,12 @@ GO
 /****** Object:  Table [dbo].[gamPersonInfo]    Script Date: 2016-02-08 9:53:22 AM ******/
 // a table containing information on all individuals in all games
 //
+// From the top down:
+// There are three aspects: Mind, Body, and Soul
+//      Each aspect has three stats:
+//          Mind: Intelligence, Contemplative, and Education
+//          Body: Size, Strength, Hearty 
+//          Soul: Honesty, Cooperative, and Venturesome
 
 SET ANSI_NULLS ON
 GO
@@ -25,6 +31,9 @@ CREATE TABLE [dbo].[gamPersonInfo](
     [intSoulHones] integer NOT NULL,            //Soul stat honesty
     [intSoulCoope] integer NOT NULL,            //Soul stat cooperative
     [intSoulVentu] integer NOT NULL,            //Soul stat venturesome
+
+
+
 	[intSecTrait1ID] [int] NULL,                //The ID for a secondary trait
 	[strSecTrait1Name] [nvarchar](15) NULL,     //The name of the secondary trait
 	[intSecTrait2ID] [int] NULL,                //The ID for a secondary trait
