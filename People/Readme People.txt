@@ -40,6 +40,7 @@ traits available, possible personal afflictions, and vocations.
 //***** Name algorithm *****
 //Generate script psuedo code
 //  - Generate stats
+//  - Generate name nation - can also be random (TABLE baseNameNation created)
 //  - Generate social background (TABLE baseSocialLevelList created)
 //  - Generate first name (TABLE baseNameFirstList created)
 //  - Based on stats are there any outstanding features?
