@@ -2,6 +2,10 @@ USE [WorldGen]
 GO
 
 /****** Object:  Table [dbo].[stNameFirstList]    Script Date: 2016-02-08 9:53:22 AM ******/
+// This table is used to hold first name options when people are generated. the perameters
+// that are required are:
+//      - The nationality of the individual being generated
+
 SET ANSI_NULLS ON
 GO
 
