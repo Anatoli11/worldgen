@@ -13,7 +13,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[stNameLastList](
-	[idLastNameID] [INTEGER] IDENTITY PRIMARY KEY,
+	[idLastName] [INTEGER] IDENTITY PRIMARY KEY,
 	[intNameNation] [INTEGER] NOT NULL,             // There is a possibility that this may not have to be specific to a nationality 
 	[strLastName] [NVARCHAR](50) NOT NULL,
 	[strLastNameGender] [NVARCHAR](1) NULL,

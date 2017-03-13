@@ -1,7 +1,7 @@
 USE [WorldGen]
 GO
 
-/****** Object:  Table [dbo].[baseTraitInfo]    Script Date: 2016-02-08 9:53:22 AM ******/
+/****** Object:  Table [dbo].[stTraitInfo]    Script Date: 2016-02-08 9:53:22 AM ******/
 // A table containing distinguishing qualities or characteristics which have the potential 
 // to modify a person’s stats and game situations. 
 //
@@ -19,16 +19,16 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[baseTraitInfo](
-	[intTraitID] [int] NOT NULL,                //ID for the particular trait
-	[strTraitName] [nvarchar](20) NOT NULL,     //Name of the trait
-	[strTraitRealm] [nvarchar](8) NOT NULL,     //Is the trait positive, neutral, or negative?
-	[strTraitNotes] [nvarchar](1000) NULL,      //Notes pertaining to the trait
-	[strAspectFamily] [nvarchar](4) NOT NULL,   //Will be part of mind, body or soul - should these be numbers intead for performance purposes?
-	[strStatMod1Name] [nvarchar](20) NULL,      //1 What is the name of the stat being modified  - should these be numbers intead for performance purposes?
-	[strMod1Type] [nvarchar](10) NULL,          //1 The type of the modifcation number (could be a value, percentage, or ????)
-    [intMod1Value] integer NULL,                //1 The value of the modification
-	[strMod1Notes] [nvarchar](1000) NULL,       //1 Notes pertaining to the specific modification
+CREATE TABLE [dbo].[stTraitInfo](
+	[idTrait] [INTEGER] IDENTITY PRIMARY KEY,
+	[strTraitName] [NVARCHAR](20) NOT NULL,     //Name of the trait
+	[strTraitRealm] [NVARCHAR](8) NOT NULL,     //Is the trait positive, neutral, or negative?
+	[strTraitNotes] [NVARCHAR](1000) NULL,      //Notes pertaining to the trait
+	[strAspectFamily] [NVARCHAR](4) NOT NULL,   //Will be part of mind, body or soul - should these be numbers intead for performance purposes?
+	[strStatMod1Name] [NVARCHAR](20) NULL,      //1 What is the name of the stat being modified  - should these be numbers intead for performance purposes?
+	[strMod1Type] [NVARCHAR](10) NOT NULL,      //1 The type of the modifcation number (could be a value, percentage, or ????)
+    [intMod1Value] [INTEGER] NOT NULL,          //1 The value of the modification
+	[strMod1Notes] [NVARCHAR](1000) NULL,       //1 Notes pertaining to the specific modification
 	
     
     
@@ -36,8 +36,12 @@ CREATE TABLE [dbo].[baseTraitInfo](
 
 GO
 
+INSERT INTO stTraitInfo (strTraitName,strTraitRealm,strTraitNotes,strAspectFamily, strStatMod1Name,strMod1Type,intMod1Value,strMod1Notes)
+VALUES
+('Intelligence','Positive','Represents the ability to learn.','Mind','trait or stat name','type',10,'mod1 notes' ),
+('Contemplative','Positive','Represents the strive towards an educational goal.','Mind','trait or stat name','type',10,'mod1 notes' ),
 
-
+;
 //Trait Mind: Mental capacity of each of the members of the pop. Again, at this point the higher the number the better, but having a lower number doesn’t mean a handicap, just a lack of the ability. The key stats will be labeled at this point:
 //•	Intelligence: Represents the ability to learn. At the high end this stat will allow the individual to suck up information like a sponge. At the low end the individual will be less versatile for changing vocation, and will be a negative modifier to education.
 //•	Contemplative: I’m not sure I will use this term, but the idea is more motivational in nature. Given that an individual is contemplative, they will strive towards an educational goal.
@@ -53,6 +57,3 @@ GO
 //Beyond the three above traits, leaders will have some additional traits, not the least of which is “leadership”. I am thinking that there will be a list of possible traits a leader could have, and a limited number of slots they can be acquired into. I think they could also be replaced over time, or by external events or stories. These will be determined at some point in the future, and I’m thinking three-quarters positive, and a quarter negative at this point.  
 
 
-insert into baseTraitInfo values
-(1,'Sibbe the Wise','a',''),
-(2,'son of Foldar','a','')
