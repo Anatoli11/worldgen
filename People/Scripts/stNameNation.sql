@@ -34,19 +34,19 @@ GO
 INSERT INTO stNameNation (
     strNameNation,
     intNameNationPrimaryLangauge,
+    strNameNationPrimaryLangaugeName,
     intNameNationPrimaryLangaugeChance,
     intNameNationSecondaryLanguage,
-    intNameNationSecondaryLangaugeChance
+    strNameNationSecondaryLangaugeName,
+    intNameNationSecondaryLangaugeChance,
     intNameNationTertiaryLanguage,
+    strNameNationTertiaryLangaugeName,
     intNameNationTertiaryLangaugeChance,
     intNameNationChance,
     intNameNationNotChance,
     strNameNationNotes)
-    )
 VALUES
-INSERT INTO stNameNation 
-VALUES
-('Scandinavian',18,'Scandinavian',60,1,'English',30,8,'German',10,90,10,'Added Scandinavian but was not on the language list')
+('Scandinavian',18,'Scandinavian',60,1,'English',30,8,'German',10,90,10,'Added Scandinavian but was not on the language list'),
 ('English',1,'English',90,2,'French',5,19,'Other',5,90,10,'')
 ;
 
