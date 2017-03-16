@@ -44,7 +44,9 @@ INSERT INTO stNameNation (
     intNameNationTertiaryLangaugeChance,
     intNameNationChance,
     intNameNationNotChance,
-    strNameNationNotes)
+    strNameNationNotes
+)
+
 VALUES
 ('Scandinavian',18,'Scandinavian',60,1,'English',30,8,'German',10,90,10,'Added Scandinavian but was not on the language list'),
 ('English',1,'English',90,2,'French',5,19,'Other',5,90,10,'')

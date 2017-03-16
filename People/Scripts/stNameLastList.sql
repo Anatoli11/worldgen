@@ -22,7 +22,13 @@ CREATE TABLE [dbo].[stNameLastList](
 
 GO
 
-INSERT INTO stNameLastList (intNameNation,strLastName,strLastNameGender,strLastNameNotes)
+INSERT INTO stNameLastList (
+    intNameNation,
+    strLastName,
+    strLastNameGender,
+    strLastNameNotes
+)
+
 VALUES
 (1,'Goodsword','a',''),																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																							
 (1,'Stormbringer','a',''),																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																							

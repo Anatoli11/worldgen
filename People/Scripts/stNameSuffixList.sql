@@ -2,11 +2,11 @@ USE [WorldGen]
 GO
 
 /****** Object:  Table [dbo].[stNameSuffixList]    Script Date: 2016-02-08 9:53:22 AM ******/
-// This table is used to hold suffix name options when people are generated. Not all 
-// individuals will have a suffix name. It is used to highlight a trait or stat value, or
-// to differentiate between individuals with the same name. The perameters that are required 
-// are:
-//      - The nationality of the individual being generated
+-- This table is used to hold suffix name options when people are generated. Not all 
+-- individuals will have a suffix name. It is used to highlight a trait or stat value, or
+-- to differentiate between individuals with the same name. The perameters that are required 
+-- are:
+--      - The nationality of the individual being generated
 
 SET ANSI_NULLS ON
 GO
@@ -16,7 +16,7 @@ GO
 
 CREATE TABLE [dbo].[stNameSuffixList](
 	[idSuffixNameList] [INTEGER] NOT NULL,
-	[intNameNation] [INTEGER] NOT NULL,         // There is a possibility that this may not have to be specific to a nationality 
+	[intNameNation] [INTEGER] NOT NULL,         -- There is a possibility that this may not have to be specific to a nationality 
 	[strSuffixName] [NVARCHAR](50) NOT NULL,
 	[strSuffixNameGender] [NVARCHAR](1) NULL,
 	[strSuffixNameNotes] [NCHAR](500) NULL
@@ -25,9 +25,15 @@ CREATE TABLE [dbo].[stNameSuffixList](
 GO
 
 
-INSERT INTO stNameSuffixList (intNameNation,strSuffixName,strSuffixNameGender,strSuffixNameNotes)
+INSERT INTO stNameSuffixList (
+    intNameNation,
+    strSuffixName,
+    strSuffixNameGender,
+    strSuffixNameNotes
+)
+
 VALUES
-(1,'Sibbe the Wise','a',''),
+(1,'the Wise','a',''),
 (1,'son of Foldar','a',''),
 (1,'the Pugnacious','a',''),
 (1,'the Eloquent','a',''),

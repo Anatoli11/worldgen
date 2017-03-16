@@ -2,9 +2,9 @@ USE [WorldGen]
 GO
 
 /****** Object:  Table [dbo].[stNameFirstList]    Script Date: 2016-02-08 9:53:22 AM ******/
-// This table is used to hold first name options when people are generated. the perameters
-// that are required are:
-//      - The nationality of the individual being generated
+-- This table is used to hold first name options when people are generated. the perameters
+-- that are required are:
+--      - The nationality of the individual being generated
 
 SET ANSI_NULLS ON
 GO
@@ -23,46 +23,53 @@ CREATE TABLE [dbo].[stNameFirstList](
 
 GO
 
-INSERT INTO stNameFirstList (intNameNation,strFirstName,strFirstNameGender,strFirstNameNotes)
+INSERT INTO stNameFirstList (
+    intNameNation,
+    strFirstName,
+    strFirstNameGender,
+    strFirstNameNotes
+)
+
 VALUES
-(1,'Aage','m','Danish and Norwegian form of ÁKI'),
-(1,'Aarne','m','Finnish form of ARNE'),
-(1,'Åge','m','Norwegian form of ÁKI'),
-(1,'Aghi','m','Ancient Scandinavian - Old Norse form of OVE'),
-(1,'Agmundr','m','Ancient Scandinavian - Old Norse form of AMUND'),
-(1,'Aila','f','Finnish - Finnish form of ÁILE'),
-(1,'Áile','f','Sami - Sami form of HELGA'),
-(1,'Aili','f','Finnish - Finnish form of ÁILE'),
-(1,'Åke','m','Swedish - Swedish form of ÁKI'),
-(1,'Áki','m','Ancient Scandinavian, Icelandic - Old Norse diminutive of names containing the element anu "ancestor, father".'),
-(1,'Áleifr','m','Ancient Scandinavian - Old Norse form of OLAF'),
-(1,'Alf','m','Swedish, Norwegian, Danish, Norse Mythology - Derived from Old Norse alfr "elf"... [more]'),
-(1,'Alfarr','m','Ancient Scandinavian - Old Norse form of ALVAR'),
-(1,'Alfhild','f','Norwegian, Swedish - From the Old Norse name Alfhildr which was composed of the elements alfr "elf" and hildr "battle"... [more]'),
-(1,'Alfhildr','f','Ancient Scandinavian - Old Norse form of ALFHILD'),
-(1,'Alfr','m','Norse Mythology - Old Norse form of ALF (1)'),
-(1,'Alivia','f','English (Modern) - Variant of OLIVIA'),
-(1,'Alv','m','Norwegian - Variant of ALF (1)'),
-(1,'Alva','f','Swedish, Norwegian - Feminine form of ALF (1)'),
-(1,'Alvar','m','Swedish, Estonian - From the Old Norse name Alfarr, formed of the elements alfr "elf" and arr "warrior".'),
-(1,'Alvilda','f','Danish - Danish form of ALFHILD'),
-(1,'Alvis','m','Norse Mythology - Means "all wise" in Old Norse... [more]'),
-(1,'Alwilda','f','History - Latinized form of ALFHILD... [more]'),
-(1,'Amhlaidh','m','Scottish - Scottish form of OLAF'),
-(1,'Amhlaoibh','m','Irish - Irish form of OLAF'),
-(1,'Amund','m','Norwegian - Derived from the Old Norse name Agmundr, from the element ag "edge of a sword" or agi "awe, terror" combined with mundr "protection".'),
-(1,'Andor','m','Norwegian - From the Old Norse name Arnþórr, derived from the element arn "eagle" combined with the name of the Norse god Þórr (see THOR).'),
-(1,'Annbjørg','f','Norwegian - Variant of ARNBJØRG'),
-(1,'Ari','m','Ancient Scandinavian, Icelandic, Finnish - Old Norse byname meaning "eagle".'),
-(1,'Aric','m','English - Variant of ERIC'),
-(1,'Arnbjörg','f','Ancient Scandinavian, Icelandic - Old Norse name derived from the elements arn meaning "eagle" and björg meaning "help, save, rescue".'),
-(1,'Arnbjørg','f','Norwegian - Norwegian form of ARNBJÖRG'),
-(1,'Arnborg','f','Swedish (Rare) - Swedish form of ARNBJÖRG'),
-(1,'Arne','m','Swedish, Norwegian, Danish - Originally an Old Norse short form of names beginning with the element arn meaning "eagle".'),
-(1,'Arnfinn','m','Norwegian - Norwegian form of Arnfinnr, which was derived from the elements arn "eagle" and Finnr "Sámi, person from Finland".'),
-(1,'Arnfinnr','m','Ancient Scandinavian - Old Norse form of ARNFINN')
+(18,'Aage','m','Danish and Norwegian form of ÁKI'),
+(18,'Aarne','m','Finnish form of ARNE'),
+(18,'Åge','m','Norwegian form of ÁKI'),
+(18,'Aghi','m','Ancient Scandinavian - Old Norse form of OVE'),
+(18,'Agmundr','m','Ancient Scandinavian - Old Norse form of AMUND'),
+(18,'Aila','f','Finnish - Finnish form of ÁILE'),
+(18,'Áile','f','Sami - Sami form of HELGA'),
+(18,'Aili','f','Finnish - Finnish form of ÁILE'),
+(18,'Åke','m','Swedish - Swedish form of ÁKI'),
+(18,'Áki','m','Ancient Scandinavian, Icelandic - Old Norse diminutive of names containing the element anu "ancestor, father".'),
+(18,'Áleifr','m','Ancient Scandinavian - Old Norse form of OLAF'),
+(18,'Alf','m','Swedish, Norwegian, Danish, Norse Mythology - Derived from Old Norse alfr "elf"... [more]'),
+(18,'Alfarr','m','Ancient Scandinavian - Old Norse form of ALVAR'),
+(18,'Alfhild','f','Norwegian, Swedish - From the Old Norse name Alfhildr which was composed of the elements alfr "elf" and hildr "battle"... [more]'),
+(18,'Alfhildr','f','Ancient Scandinavian - Old Norse form of ALFHILD'),
+(18,'Alfr','m','Norse Mythology - Old Norse form of ALF (1)'),
+(18,'Alivia','f','English (Modern) - Variant of OLIVIA'),
+(18,'Alv','m','Norwegian - Variant of ALF (1)'),
+(18,'Alva','f','Swedish, Norwegian - Feminine form of ALF (1)'),
+(18,'Alvar','m','Swedish, Estonian - From the Old Norse name Alfarr, formed of the elements alfr "elf" and arr "warrior".'),
+(18,'Alvilda','f','Danish - Danish form of ALFHILD'),
+(18,'Alvis','m','Norse Mythology - Means "all wise" in Old Norse... [more]'),
+(18,'Alwilda','f','History - Latinized form of ALFHILD... [more]'),
+(18,'Amhlaidh','m','Scottish - Scottish form of OLAF'),
+(18,'Amhlaoibh','m','Irish - Irish form of OLAF'),
+(18,'Amund','m','Norwegian - Derived from the Old Norse name Agmundr, from the element ag "edge of a sword" or agi "awe, terror" combined with mundr "protection".'),
+(18,'Andor','m','Norwegian - From the Old Norse name Arnþórr, derived from the element arn "eagle" combined with the name of the Norse god Þórr (see THOR).'),
+(18,'Annbjørg','f','Norwegian - Variant of ARNBJØRG'),
+(18,'Ari','m','Ancient Scandinavian, Icelandic, Finnish - Old Norse byname meaning "eagle".'),
+(18,'Aric','m','English - Variant of ERIC'),
+(18,'Arnbjörg','f','Ancient Scandinavian, Icelandic - Old Norse name derived from the elements arn meaning "eagle" and björg meaning "help, save, rescue".'),
+(18,'Arnbjørg','f','Norwegian - Norwegian form of ARNBJÖRG'),
+(18,'Arnborg','f','Swedish (Rare) - Swedish form of ARNBJÖRG'),
+(18,'Arne','m','Swedish, Norwegian, Danish - Originally an Old Norse short form of names beginning with the element arn meaning "eagle".'),
+(18,'Arnfinn','m','Norwegian - Norwegian form of Arnfinnr, which was derived from the elements arn "eagle" and Finnr "Sámi, person from Finland".'),
+(18,'Arnfinnr','m','Ancient Scandinavian - Old Norse form of ARNFINN')
 ;
 
+/*
 AAGE	m	Danish and Norwegian form of ÁKI
 AARNE	m	Finnish form of ARNE
 ÅGE	m	Norwegian form of ÁKI
@@ -99,10 +106,10 @@ ARNBORG	f	Swedish (Rare) - Swedish form of ARNBJÖRG
 ARNE	m	Swedish, Norwegian, Danish - Originally an Old Norse short form of names beginning with the element arn meaning "eagle".
 ARNFINN	m	Norwegian - Norwegian form of Arnfinnr, which was derived from the elements arn "eagle" and Finnr "Sámi, person from Finland".
 ARNFINNR	m	Ancient Scandinavian - Old Norse form of ARNFINN
+*/
 
 
-
-
+/*
 ÁRNI   m   Ancient Scandinavian, Icelandic - Old Norse and Icelandic form of ARNE (1)
 ARNÓR   m   Icelandic - Icelandic variant form of ANDOR (1)
 ARNÓRR   m   Ancient Scandinavian - Variant of ARNÞÓRR
@@ -843,3 +850,5 @@ YLVA   f   Swedish, Norwegian, Danish - Means "she-wolf", a derivative of Old No
 YNGVAR   m   Norwegian - Variant of INGVAR
 YNGVARR   m   Ancient Scandinavian - Old Norse form of INGVAR
 YNGVILDR   f   Ancient Scandinavian - Old Norse form of INGVILD
+*/
+

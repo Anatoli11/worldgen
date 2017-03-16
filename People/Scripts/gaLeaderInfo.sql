@@ -67,7 +67,7 @@ strSecTrait5Name,
 strLeaderNotes
 )
 VALUES
-(1,'Test','M',1,2,3,4,5,6,7,8,9,1,'test1',2,'test2',3,'test3',4,'test4',5,'test5','')
+(1,'Test','M',1,2,3,4,5,6,7,8,9,1,'test1',2,'test2',3,'test3',4,'test4',5,'test5','Leader test notes')
 
 ;
 
