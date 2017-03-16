@@ -1,10 +1,10 @@
 USE [WorldGen]
 GO
 
-/****** Object:  Table [dbo].[gameLeaderInfo]    Script Date: 2017-02-24 9:53:22 AM ******/
-// a table containing information on all leaders in all games
-// Notes:
-// Leaders have space for five traits while individuals have only three
+/****** Object:  Table [dbo].[gaLeaderInfo]    Script Date: 2017-02-24 9:53:22 AM ******/
+-- a table containing information on all leaders in all games
+-- Notes:
+-- Leaders have space for five traits while individuals have only three
 
 SET ANSI_NULLS ON
 GO
@@ -12,38 +12,64 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[gameLeaderInfo](
-	[intGameID] [int] NOT NULL,                 //ID for the particular game
-	[strLeaderName] [nvarchar](50) NOT NULL,    //Name of the leader
-	[strLeaderGender] [nvarchar](1) NOT NULL,   //Gender of the leader
-    [intMindIntel] integer NOT NULL,            //Mind stat intelligence
-    [intMindConte] integer NOT NULL,            //Mind stat contemplative
-    [intMindEducat] integer NOT NULL,           //Mind stat education
-    [intBodySize] integer NOT NULL,             //Body stat size
-    [intBodyStren] integer NOT NULL,            //Body stat size
-    [intBodyHeart] integer NOT NULL,            //Body stat size
-    [intSoulHones] integer NOT NULL,            //Soul stat honesty
-    [intSoulCoope] integer NOT NULL,            //Soul stat cooperative
-    [intSoulVentu] integer NOT NULL,            //Soul stat venturesome
-	[intSecTrait1ID] [int] NULL,                //The ID for a secondary trait
-	[strSecTrait1Name] [nvarchar](15) NULL,     //The name of the secondary trait
-	[intSecTrait2ID] [int] NULL,                //The ID for a secondary trait
-	[strSecTrait2Name] [nvarchar](15) NULL,     //The name of the secondary trait
-	[intSecTrait3ID] [int] NULL,                //The ID for a secondary trait
-	[strSecTrait3Name] [nvarchar](15) NULL,     //The name of the secondary trait
-	[intSecTrait4ID] [int] NULL,                //The ID for a secondary trait
-	[strSecTrait4Name] [nvarchar](15) NULL,     //The name of the secondary trait
-	[intSecTrait5ID] [int] NULL,                //The ID for a secondary trait
-	[strSecTrait5Name] [nvarchar](15) NULL,     //The name of the secondary trait
-
-	[strSuffixNameNotes] [nchar](500) NULL      //Free-form text field for notes
+CREATE TABLE [dbo].[gaLeaderInfo](
+	[intLeaderID] [INTEGER] IDENTITY PRIMARY KEY,   --Unique ID for th leader - ceases to be a person, so new ID generated
+	[intGameID] [INTEGER] NOT NULL,                 --ID for the particular game
+	[strLeaderName] [NVARCHAR](50) NOT NULL,        --Name of the leader
+	[strLeaderGender] [NVARCHAR](1) NOT NULL,       --Gender of the leader
+    [intMindIntel] [INTEGER] NOT NULL,              --Mind stat intelligence
+    [intMindConte] [INTEGER] NOT NULL,              --Mind stat contemplative
+    [intMindEducat] [INTEGER] NOT NULL,             --Mind stat education
+    [intBodySize] [INTEGER] NOT NULL,               --Body stat size
+    [intBodyStren] [INTEGER] NOT NULL,              --Body stat size
+    [intBodyHeart] [INTEGER] NOT NULL,              --Body stat size
+    [intSoulHones] [INTEGER] NOT NULL,              --Soul stat honesty
+    [intSoulCoope] [INTEGER] NOT NULL,              --Soul stat cooperative
+    [intSoulVentu] [INTEGER] NOT NULL,              --Soul stat venturesome
+	[intSecTrait1ID] [INTEGER] NULL,                --The ID for a secondary trait
+	[strSecTrait1Name] [NVARCHAR](15) NULL,         --The name of the secondary trait
+	[intSecTrait2ID] [INTEGER] NULL,                --The ID for a secondary trait
+	[strSecTrait2Name] [NVARCHAR](15) NULL,         --The name of the secondary trait
+	[intSecTrait3ID] [INTEGER] NULL,                --The ID for a secondary trait
+	[strSecTrait3Name] [NVARCHAR](15) NULL,         --The name of the secondary trait
+	[intSecTrait4ID] [INTEGER] NULL,                --The ID for a secondary trait
+	[strSecTrait4Name] [NVARCHAR](15) NULL,         --The name of the secondary trait
+	[intSecTrait5ID] [INTEGER] NULL,                --The ID for a secondary trait
+	[strSecTrait5Name] [NVARCHAR](15) NULL,         --The name of the secondary trait
+	[strLeaderNotes] [NCHAR](500) NULL              --Free-form text field for notes
 ) ON [PRIMARY]
 
 GO
 
-INSERT INTO gameLeaderInfo VALUES 
-(1,1,'Imazighen',FALSE,'Afro-Asiatic peoples Berbers (Imazighen) Berbers (Imazighen): Morocco, Tunisia, Algeria, Libya, Egypt, Mauritania'),
+INSERT INTO gaLeaderInfo (
+intGameID,
+strLeaderName,
+strLeaderGender,
+intMindIntel,
+intMindConte,
+intMindEducat,
+intBodySize,
+intBodyStren,
+intBodyHeart,
+intSoulHones,
+intSoulCoope,
+intSoulVentu,
+intSecTrait1ID,
+strSecTrait1Name,
+intSecTrait2ID,
+strSecTrait2Name,
+intSecTrait3ID,
+strSecTrait3Name,
+intSecTrait4ID,
+strSecTrait4Name,
+intSecTrait5ID,
+strSecTrait5Name,
+strLeaderNotes
+)
+VALUES
+(1,'Test','M',1,2,3,4,5,6,7,8,9,1,'test1',2,'test2',3,'test3',4,'test4',5,'test5','')
 
+;
 
 
 
