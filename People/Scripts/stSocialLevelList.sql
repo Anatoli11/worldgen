@@ -2,7 +2,7 @@ USE [WorldGen]
 GO
 
 /****** Object:  Table [dbo].[stSocialLevelList]    Script Date: 2016-02-08 9:53:22 AM ******/
-// This table is a list of social levels and modifiers 
+-- This table is a list of social levels and modifiers 
 
 SET ANSI_NULLS ON
 GO
@@ -19,7 +19,11 @@ CREATE TABLE [dbo].[stSocialLevelList](
 GO
 
 
-INSERT INTO stSocialLevelList (strSocialLevelName,strPrefixNameNotes)
+INSERT INTO stSocialLevelList (
+    strSocialLevelName,
+    strPrefixNameNotes
+)
+
 VALUES
 ('Alpha',''),
 ('Beta',''),
