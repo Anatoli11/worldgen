@@ -4,16 +4,46 @@
     <title>People Generation Sandbox</title>
     <script type="text/javascript">
 
-    var intMindAptitude
-    var intMindLearning
-    var intMindJudgment
-    var intBodyMass
-    var intBodyMight
-    var intBodyVigour
-    var intSoulIntegrity
-    var intSoulGoodness
-    var intSoulCharacter
+    // Stat variables
+    var intMindAptitude;
+    var intMindLearning;
+    var intMindJudgment;
+    var intBodyMass;
+    var intBodyMight;
+    var intBodyVigour;
+    var intSoulIntegrity;
+    var intSoulGoodness;
+    var intSoulCharacter;
 
+    /**
+     * Returns a random integer between min (inclusive) and max (inclusive)
+     * Using Math.round() will give you a non-uniform distribution!
+     */
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }    
+    
+    intMindAptitude = getRandomInt(1, 100);
+    intMindLearning = getRandomInt(1, 100);
+    intMindJudgment = getRandomInt(1, 100);
+    intBodyMass = getRandomInt(1, 100);
+    intBodyMight = getRandomInt(1, 100);
+    intBodyVigour = getRandomInt(1, 100);
+    intSoulIntegrity = getRandomInt(1, 100);
+    intSoulGoodness = getRandomInt(1, 100);
+    intSoulCharacter = getRandomInt(1, 100);
+    
+    alert (
+    "Aptitude : " + intMindAptitude + 
+    "\nLearning : " + intMindLearning +
+    "\nJudgment : " + intMindJudgment +
+    "\nMass     : " + intBodyMass +
+    "\nMight    : " + intBodyMight +
+    "\nVigour   : " + intBodyVigour +
+    "\nIntegrity: " + intSoulIntegrity +
+    "\nGoodness : " + intSoulGoodness +
+    "\nCharacter: " + intSoulCharacter
+    );
     
     </script>
 </head>
