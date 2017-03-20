@@ -17,15 +17,15 @@ CREATE TABLE [dbo].[gaLeaderInfo](
 	[intGameID] [INTEGER] NOT NULL,                 --ID for the particular game
 	[strLeaderName] [NVARCHAR](50) NOT NULL,        --Name of the leader
 	[strLeaderGender] [NVARCHAR](1) NOT NULL,       --Gender of the leader
-    [intMindIntel] [INTEGER] NOT NULL,              --Mind stat intelligence
-    [intMindConte] [INTEGER] NOT NULL,              --Mind stat contemplative
-    [intMindEducat] [INTEGER] NOT NULL,             --Mind stat education
-    [intBodySize] [INTEGER] NOT NULL,               --Body stat size
-    [intBodyStren] [INTEGER] NOT NULL,              --Body stat size
-    [intBodyHeart] [INTEGER] NOT NULL,              --Body stat size
-    [intSoulHones] [INTEGER] NOT NULL,              --Soul stat honesty
-    [intSoulCoope] [INTEGER] NOT NULL,              --Soul stat cooperative
-    [intSoulVentu] [INTEGER] NOT NULL,              --Soul stat venturesome
+    [intMindAptitude] [INTEGER] NOT NULL,            
+    [intMindLearning] [INTEGER] NOT NULL,            
+    [intMindJudgment] [INTEGER] NOT NULL,           
+    [intBodyMass] [INTEGER] NOT NULL,             
+    [intBodyMight] [INTEGER] NOT NULL,            
+    [intBodyVigour] [INTEGER] NOT NULL,            
+    [intSoulIntegrity] [INTEGER] NOT NULL,            
+    [intSoulGoodness] [INTEGER] NOT NULL,            
+    [intSoulCharacter] [INTEGER] NOT NULL,            
 	[intSecTrait1ID] [INTEGER] NULL,                --The ID for a secondary trait
 	[strSecTrait1Name] [NVARCHAR](15) NULL,         --The name of the secondary trait
 	[intSecTrait2ID] [INTEGER] NULL,                --The ID for a secondary trait
@@ -42,29 +42,29 @@ CREATE TABLE [dbo].[gaLeaderInfo](
 GO
 
 INSERT INTO gaLeaderInfo (
-intGameID,
-strLeaderName,
-strLeaderGender,
-intMindIntel,
-intMindConte,
-intMindEducat,
-intBodySize,
-intBodyStren,
-intBodyHeart,
-intSoulHones,
-intSoulCoope,
-intSoulVentu,
-intSecTrait1ID,
-strSecTrait1Name,
-intSecTrait2ID,
-strSecTrait2Name,
-intSecTrait3ID,
-strSecTrait3Name,
-intSecTrait4ID,
-strSecTrait4Name,
-intSecTrait5ID,
-strSecTrait5Name,
-strLeaderNotes
+    intGameID,
+    strLeaderName,
+    strLeaderGender,
+    intMindAptitude,
+    intMindLearning,
+    intMindJudgment,
+    intBodyMass,
+    intBodyMight,
+    intBodyVigour,
+    intSoulIntegrity,
+    intSoulGoodness,
+    intSoulCharacter,
+    intSecTrait1ID,
+    strSecTrait1Name,
+    intSecTrait2ID,
+    strSecTrait2Name,
+    intSecTrait3ID,
+    strSecTrait3Name,
+    intSecTrait4ID,
+    strSecTrait4Name,
+    intSecTrait5ID,
+    strSecTrait5Name,
+    strLeaderNotes
 )
 VALUES
 (1,'Test','M',1,2,3,4,5,6,7,8,9,1,'test1',2,'test2',3,'test3',4,'test4',5,'test5','Leader test notes')

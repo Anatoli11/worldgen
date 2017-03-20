@@ -23,15 +23,15 @@ CREATE TABLE [dbo].[gaPersonInfo](
 	[strName] [NVARCHAR](50) NOT NULL,          --Name of the person
 	[strGender] [NVARCHAR](1) NOT NULL,         --Gender of the person
 	[intPopID] [INTEGER] NULL,                      --The pop group that the person belongs to
-    [intMindIntel] [INTEGER] NOT NULL,            --Mind stat intelligence
-    [intMindConte] [INTEGER] NOT NULL,            --Mind stat contemplative
-    [intMindEducat] [INTEGER] NOT NULL,           --Mind stat education
-    [intBodySize] [INTEGER] NOT NULL,             --Body stat size
-    [intBodyStren] [INTEGER] NOT NULL,            --Body stat size
-    [intBodyHeart] [INTEGER] NOT NULL,            --Body stat size
-    [intSoulHones] [INTEGER] NOT NULL,            --Soul stat honesty
-    [intSoulCoope] [INTEGER] NOT NULL,            --Soul stat cooperative
-    [intSoulVentu] [INTEGER] NOT NULL,            --Soul stat venturesome
+    [intMindAptitude] [INTEGER] NOT NULL,            --Mind stat intelligence
+    [intMindLearning] [INTEGER] NOT NULL,            --Mind stat contemplative
+    [intMindJudgment] [INTEGER] NOT NULL,           --Mind stat education
+    [intBodyMass] [INTEGER] NOT NULL,             --Body stat size
+    [intBodyMight] [INTEGER] NOT NULL,            --Body stat size
+    [intBodyVigour] [INTEGER] NOT NULL,            --Body stat size
+    [intSoulIntegrity] [INTEGER] NOT NULL,            --Soul stat honesty
+    [intSoulGoodness] [INTEGER] NOT NULL,            --Soul stat cooperative
+    [intSoulCharacter] [INTEGER] NOT NULL,            --Soul stat venturesome
 	[intSecTrait1ID] [INTEGER] NULL,                --The ID for a secondary trait
 	[strSecTrait1Name] [NVARCHAR](15) NULL,     --The name of the secondary trait
 	[intSecTrait2ID] [INTEGER] NULL,                --The ID for a secondary trait
@@ -43,19 +43,29 @@ CREATE TABLE [dbo].[gaPersonInfo](
 
 GO
 
---Trait Mind: Mental capacity of each of the members of the pop. Again, at this point the higher the number the better, but having a lower number doesn’t mean a handicap, just a lack of the ability. The key stats will be labeled at this point:
---•	Intelligence: Represents the ability to learn. At the high end this stat will allow the individual to suck up information like a sponge. At the low end the individual will be less versatile for changing vocation, and will be a negative modifier to education.
---•	Contemplative: I’m not sure I will use this term, but the idea is more motivational in nature. Given that an individual is contemplative, they will strive towards an educational goal.
---•	Education: This will be a growing stat that will reflect age, contemplativeness, and intelligence. Unless there is an accident or illness, this number will grow as the individual ages.
---Trait Body: This set of stats represents the physical traits of the individual. Some tasks and vocations will be primarily physical in nature and will rely heavily on this trait.
---•	Size: This stat will be the physical size of the individual. I think I wrote about this before, that it will be bell-curved. This stat is affected by the other stats of strength and hearty to some degree.
---•	Strength: Again, another straight forward stat, and again, bell-curved. 
---•	Hearty: This stat will represent the health of the individual. As age increases, and perhaps injury, sub-par diet, or illness happens, this will modify strength primarily, and maybe size to a lesser degree.
---Trait Soul: This trait will be a bit more difficult to pin down. To a certain extent, it represents the personality of the individual, but this gets into some sketchy ground when I try to balance it against the mind trait, as it can be argued that they are similar in some ways, two sides of a coin perhaps.
---•	Honesty: The honesty stat is a reflection on how forthcoming the individual is. This could be used by business, labour, or social aspects. I’m not sure at this point what the overall ramifications of honesty will be at this point, but I think it is an important stat that can have some interesting uses.
---•	Cooperative: This stat is sort of an all-encompassing vision of how the individual fits into society as a whole. I see “more cooperative” as being social, and for the good of the population, while less cooperative will be introverted. Other choices for the same idea might be “patriotic” or maybe “sociable”.
---•	Venturesome: This stat will represent the amount of risk an individual is willing to take. It might also be a factor for a “moral check”, and might also be described as “boldness” or “adventurous”. I’m not completely sold on the term, or the ideal at this point, but for the purposes of an initial model it will do.
---Beyond the three above traits, leaders will have some additional traits, not the least of which is “leadership”. I am thinking that there will be a list of possible traits a leader could have, and a limited number of slots they can be acquired into. I think they could also be replaced over time, or by external events or stories. These will be determined at some point in the future, and I’m thinking three-quarters positive, and a quarter negative at this point.  
+--Mind 
+--    aptitude (constant)
+--    learning (development) 
+--    judgment (current)
+--For the purposes of WorldGen intelligence and education will be the key drivers for discovery, 
+--task ability, and cleverness and such. I plan to use sanity somewhat like the role-playing game 
+--Call of Cthulhu where it is kind of a wild card, and will generally only go down over time. It 
+--may also be used to calculate rationality for some decision-based scenarios.
+
+--Body
+--    mass (constant)
+--    might (development)
+--    vigour (current)
+--They are all pretty self-explanatory, and provided the base model for the other two aspects.
+
+--Soul
+--    integrity (constant)
+--    goodness (development)
+--    character (current)
+--The idea is that the soul realm is really a plus/minus with the higher numbers being the sphere of 
+--good, middle numbers neutral, and low numbers bad/evil/immoral, which will be defined precisely 
+--later. Perhaps it is an indication of your moral compass. We shall see.
+
 
 
 INSERT INTO gaPersonInfo (
@@ -63,15 +73,15 @@ INSERT INTO gaPersonInfo (
     strName,
     strGender,
     intPopID,
-    intMindIntel,
-    intMindConte,
-    intMindEducat,
-    intBodySize,
-    intBodyStren,
-    intBodyHeart,
-    intSoulHones,
-    intSoulCoope,
-    intSoulVentu,
+    intMindAptitude,
+    intMindLearning,
+    intMindJudgment,
+    intBodyMass,
+    intBodyMight,
+    intBodyVigour,
+    intSoulIntegrity,
+    intSoulGoodness,
+    intSoulCharacter,
     intSecTrait1ID,
     strSecTrait1Name,
     intSecTrait2ID,
@@ -81,6 +91,6 @@ INSERT INTO gaPersonInfo (
     strPersonNotes
 )
 VALUES
-(1,'TestPopName','M',1,1,2,3,4,5,6,7,8,9,1,"Trait1Name',2,"Trait2Name',3,"Trait3Name','Test person notes')
+(1,'TestPopName','M',1,1,2,3,4,5,6,7,8,9,1,"Trait1Name',2,'Trait2Name',3,'Trait3Name','Test person notes')
 
 ;
