@@ -22,16 +22,21 @@
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }    
+    //intMindAptitude = getRandomInt(1, 100);
     
-    intMindAptitude = getRandomInt(1, 100);
-    intMindLearning = getRandomInt(1, 100);
-    intMindJudgment = getRandomInt(1, 100);
-    intBodyMass = getRandomInt(1, 100);
-    intBodyMight = getRandomInt(1, 100);
-    intBodyVigour = getRandomInt(1, 100);
-    intSoulIntegrity = getRandomInt(1, 100);
-    intSoulGoodness = getRandomInt(1, 100);
-    intSoulCharacter = getRandomInt(1, 100);
+    function getD10() {
+        return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+    }    
+    
+    intMindAptitude = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intMindLearning = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intMindJudgment = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intBodyMass = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intBodyMight = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intBodyVigour = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intSoulIntegrity = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intSoulGoodness = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intSoulCharacter = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
     
     alert (
     "Aptitude : " + intMindAptitude + 
@@ -44,6 +49,16 @@
     "\nGoodness : " + intSoulGoodness +
     "\nCharacter: " + intSoulCharacter
     );
+
+    document.write(intMindAptitude + "," + intMindLearning);
+    document.write("," + intMindJudgment);
+    document.write("," + intBodyMass);
+    document.write("," + intBodyMight);
+    document.write("," + intBodyVigour);
+    document.write("," + intSoulIntegrity);
+    document.write("," + intSoulGoodness);
+    document.write("," + intSoulCharacter);
+    
     
     </script>
 </head>
