@@ -14,8 +14,24 @@
     var intSoulIntegrity;
     var intSoulGoodness;
     var intSoulCharacter;
+    var intTotal;
+    var intAverage;
 
-    /**
+    // Stat array - single dimesion just for lables at this point
+    var arrayStatGen = [];
+    arrayStatGen[0] = "Aptitude";
+    arrayStatGen[1] = "Learning";
+    arrayStatGen[2] = "Judgment";
+    arrayStatGen[3] = "Mass";
+    arrayStatGen[3] = "Might";
+    arrayStatGen[3] = "Vigour";
+    arrayStatGen[3] = "Integrity";
+    arrayStatGen[3] = "Goodness";
+    arrayStatGen[3] = "Character";
+    arrayStatGen[3] = "Total";
+    arrayStatGen[3] = "Average";
+
+   /**
      * Returns a random integer between min (inclusive) and max (inclusive)
      * Using Math.round() will give you a non-uniform distribution!
      */
@@ -27,7 +43,12 @@
     function getD10() {
         return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     }    
-    
+    function getD50() {
+        return Math.floor(Math.random() * (50 - 1 + 1)) + 1;
+    }    
+
+/*    
+    // an example using 10 d10 - kind of long winded
     intMindAptitude = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
     intMindLearning = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
     intMindJudgment = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
@@ -37,7 +58,24 @@
     intSoulIntegrity = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
     intSoulGoodness = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
     intSoulCharacter = getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10() + getD10();
+*/
     
+    // an example using 1d50 and 5 d10 - there are better ways to do this
+    intMindAptitude = getD50() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intMindLearning = getD50() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intMindJudgment = getD50() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intBodyMass = getD50() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intBodyMight = getD50() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intBodyVigour = getD50() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intSoulIntegrity = getD50() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intSoulGoodness = getD50() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intSoulCharacter = getD50() + getD10() + getD10() + getD10() + getD10() + getD10();
+    intTotal = intMindAptitude + intMindLearning + intMindJudgment + intBodyMass + intBodyMight + intBodyVigour + intSoulIntegrity + intSoulGoodness + intSoulCharacter;
+    intAverage = intTotal/9;
+    
+    
+/*  
+    // screen display via alert box
     alert (
     "Aptitude : " + intMindAptitude + 
     "\nLearning : " + intMindLearning +
@@ -49,15 +87,19 @@
     "\nGoodness : " + intSoulGoodness +
     "\nCharacter: " + intSoulCharacter
     );
+*/
 
-    document.write(intMindAptitude + "," + intMindLearning);
-    document.write("," + intMindJudgment);
-    document.write("," + intBodyMass);
-    document.write("," + intBodyMight);
-    document.write("," + intBodyVigour);
-    document.write("," + intSoulIntegrity);
-    document.write("," + intSoulGoodness);
-    document.write("," + intSoulCharacter);
+    // screen display via document write
+    document.write("<br />" + intMindAptitude + "<br />" + intMindLearning);
+    document.write("<br />" + intMindJudgment);
+    document.write("<br />" + intBodyMass);
+    document.write("<br />" + intBodyMight);
+    document.write("<br />" + intBodyVigour);
+    document.write("<br />" + intSoulIntegrity);
+    document.write("<br />" + intSoulGoodness);
+    document.write("<br />" + intSoulCharacter);
+    document.write("<br />" + intTotal);
+    document.write("<br />" + intAverage);
     
     
     </script>
