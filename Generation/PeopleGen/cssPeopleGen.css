@@ -1,5 +1,22 @@
+/* standout style example */
 .standout {
   color:red;
   text-align:left;
   font-size:20pt;
+}
+
+/* red text example */
+.red-text {
+    color: red;
+}
+
+/* font example - second entry is the fallback if the first is unavailable (added to the h2 element) */
+h2 {
+    font-family: Lobster, Monospace;
+}
+
+/* text size and font example (added to paragraphs) */
+p {
+    font-size: 16px;
+    font-family: Monospace;
 }
