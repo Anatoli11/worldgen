@@ -10,6 +10,11 @@
     color: red;
 }
 
+/* A property called width that controls an element's width. Just like with fonts, we'll use px (pixels) to specify the image's width. */
+.smaller-image {
+    width: 100px;
+}
+
 /* font example - second entry is the fallback if the first is unavailable (added to the h2 element) */
 h2 {
     font-family: Lobster, Monospace;
@@ -20,3 +25,12 @@ p {
     font-size: 16px;
     font-family: Monospace;
 }
+
+/* format example - border-radius can be in pixels (px) as well */
+.thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+}
+
