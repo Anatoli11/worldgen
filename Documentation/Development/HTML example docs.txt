@@ -1,0 +1,22 @@
+
+/* An example of style overide */
+
+<style>
+  body {
+    background-color: black;
+    font-family: Monospace;
+    color: green;
+  }
+  #orange-text {
+    color: orange;
+  }
+  .pink-text {
+    color: pink !important;
+  }
+  .blue-text {
+    color: blue;
+  }
+</style>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+
+Order: 1) default, 2) order in style, 3) ID specific, 4) inline assignment, 5) !important
