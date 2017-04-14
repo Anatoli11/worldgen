@@ -12,7 +12,7 @@ $(document).ready(function() {
     $(".target:even").addClass("animated shake");
     $("body").addClass("animated hinge");
 });
-/*
+*/
 
 alert('hi from script JS file');
 
