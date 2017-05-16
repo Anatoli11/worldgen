@@ -1,5 +1,5 @@
 
-//alert("test");
+alert("test");
 
 /**
  * Returns a random integer between min (inclusive) and max (inclusive)
@@ -16,6 +16,31 @@ function getD10() {
 function getD50() {
     return Math.floor(Math.random() * (50 - 1 + 1)) + 1;
 }    
+
+function getD100() {
+    return Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+}    
+
+// A constructor that we can add parameters to 
+var Person = function(intMindAptitude, intMindLearning, intMindJudgment, intBodyMass, intBodyMight, intBodyVigour, intSoulIntegrity, intSoulGoodness, intSoulCharacter, intTotal, intAverage) {
+  this.intMindAptitude = intMindAptitude;
+  this.intMindLearning = intMindLearning;
+  this.intMindJudgment = intMindJudgment;
+  this.intBodyMass = intBodyMass;
+  this.intBodyMight = intBodyMight;
+  this.intBodyVigour = intBodyVigour;
+  this.intSoulIntegrity = intSoulIntegrity;
+  this.intSoulGoodness = intSoulGoodness;
+  this.intSoulCharacter = intSoulCharacter;
+  this.intTotal = intTotal;
+  this.intAverage = intAverage;
+};
+// Now we can pass in arguments
+var myPerson = new Person(getD100(),getD100(),getD100(),getD100(),getD100(),getD100(),getD100(),getD100(),getD100(),getD100());
+
+document.write(myPerson);
+
+//  intMindAptitude, intMindLearning, intMindJudgment, intBodyMass, intBodyMight, intBodyVigour, intSoulIntegrity, intSoulGoodness, intSoulCharacter, intTotal, intAverage
 
 /*
     var intMindAptitude;
@@ -56,7 +81,23 @@ document.write("<br />Goodness  :" + intSoulGoodness);
 document.write("<br />Character :" + intSoulCharacter);
 document.write("<br />Total     :" + intTotal);
 document.write("<br />Average   :" + intAverage);
-    
+
+/* jQuery selector examples    
+$(document).ready(function() {
+    $("#target1").css("color", "red");
+    $("#target1").prop("disabled", true);
+    $("#target4").remove();
+    $("#target2").appendTo("#right-well");
+    $("#target5").clone().appendTo("#left-well");
+    $("#target1").parent().css("background-color", "red");
+    $("#right-well").children().css("color", "orange");
+    $("#left-well").children().css("color", "green");
+    $(".target:nth-child(2)").addClass("animated bounce");
+    $(".target:even").addClass("animated shake");
+    $("body").addClass("animated hinge");
+});
+/*
+
     /*
 // object name
 var genPerson = {                                        
